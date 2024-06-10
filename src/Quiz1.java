@@ -4,9 +4,8 @@ public class Quiz1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int operator;
-        boolean run = true;
         int a, b;
-        while (run) {
+        while (true) {
             System.out.println("원하는 기능을 선택하세요");
             System.out.println("1. 덧셈 /2. 뺄셈 /3. 곱셈 /4. 나눗셈 /0. 종료");
             operator = sc.nextInt();
@@ -17,19 +16,23 @@ public class Quiz1 {
             }
             switch (operator) {
                 case 1:
-                    inputNum();
+                    a = inputNum1();
+                    b = inputNum2();
                     System.out.println(a + " + " + b + " = " + (a + b));
                     break;
                 case 2:
-                    inputNum();
+                    a = inputNum1();
+                    b = inputNum2();
                     System.out.println(a + " - " + b + " = " + (a - b));
                     break;
                 case 3:
-                    inputNum();
-                    System.out.println(a + " * " + b + " = " + (a * b));
+                    a = inputNum1();
+                    b = inputNum2();
+                    System.out.println(a + " * " + b + "` = " + (a * b));
                     break;
                 case 4:
-                    inputNum();
+                    a = inputNum1();
+                    b = inputNum2();
                     System.out.println(a + " / " + b + " = " + ((double) a / b));
                     break;
                 default:
@@ -38,17 +41,22 @@ public class Quiz1 {
             }
         }
     }
-    static int[] inputNum(){
+    static int inputNum1(){
         Scanner sc = new Scanner(System.in);
-        int[] nums = new int[2];
+        int a;
 
         System.out.println("첫번째 값을 입력하고 엔터를 누르세요.");
-        nums[0] = sc.nextInt();
+        a = sc.nextInt();
 
+        return a;
+    }
+    static int inputNum2(){
+        Scanner sc = new Scanner(System.in);
+        int b;
         System.out.println("두번째 값을 입력하고 엔터를 누르세요.");
-        nums[1] = sc.nextInt();
+        b = sc.nextInt();
 
-        return nums;
+        return b;
     }
 }
 
