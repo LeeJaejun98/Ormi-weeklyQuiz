@@ -12,8 +12,8 @@ public class Product {
     }
 
 
-    public void calculatePrice(){
-        System.out.println("가격은 : " + this.price);
+    public double calculatePrice(){
+        return this.price;
     }
 
     public String getProductName() {

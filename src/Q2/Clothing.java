@@ -2,15 +2,18 @@ package Q2;
 
 public class Clothing extends Product {
 
-    String size;
+    private String size;
 
     public Clothing(String productName, double price, int inventory, String size) {
         super(productName, price, inventory);
-        size = this.size;
+        this.size = size;
     }
 
     @Override
-    public void calculatePrice(){
-
+    public double calculatePrice(){
+        if (size.equals("L")){
+            return super.getPrice() * 1.1;
+        }
+        return super.getPrice();
     }
 }
