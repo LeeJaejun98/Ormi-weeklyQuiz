@@ -15,6 +15,10 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
+### Information about project ###
+.idea
+Ormi_weeklyQuiz.iml
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
